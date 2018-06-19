@@ -15,7 +15,7 @@ public class AcceptChoice : MonoBehaviour {
 
     public Slider swordSlider;
   //  List<int> statement = new List<int>();
-    int currentStatement;
+    public int currentStatement;
     int lastStatement;
 
     int snapPoint;
