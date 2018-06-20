@@ -36,8 +36,10 @@ public class Answers : MonoBehaviour {
     }
 
 
-    public void GetData (int statement, int answer)
+    public void GetData ()
     {
+        int statement;
+        int answer;
         statement = acceptChoice.currentStatement;
         answer = givenAnswer;
 	}
