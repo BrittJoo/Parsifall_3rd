@@ -544,7 +544,6 @@ MonoBehaviour:
   m_PreferredHeight: -1
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
-  m_LayoutPriority: 1
 --- !u!114 &114081408346868794
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -576,9 +575,8 @@ MonoBehaviour:
   - Statement 18
   overMouse: 0
   StatementTextObject: {fileID: 114169901912266752}
-  statement: 0700000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
-  character: 
-  answers: 
+  swordSlider: {fileID: 0}
+  currentStatement: 0
 --- !u!114 &114169901912266752
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -774,7 +772,6 @@ MonoBehaviour:
   m_PreferredHeight: -1
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
-  m_LayoutPriority: 1
 --- !u!114 &114289972455703232
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -953,7 +950,6 @@ MonoBehaviour:
   m_PreferredHeight: -1
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
-  m_LayoutPriority: 1
 --- !u!114 &114573198333618594
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1050,7 +1046,6 @@ MonoBehaviour:
   m_PreferredHeight: -1
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
-  m_LayoutPriority: 1
 --- !u!114 &114694152971402036
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1178,7 +1173,6 @@ MonoBehaviour:
   m_PreferredHeight: -1
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
-  m_LayoutPriority: 1
 --- !u!114 &114935596174838718
 MonoBehaviour:
   m_ObjectHideFlags: 1

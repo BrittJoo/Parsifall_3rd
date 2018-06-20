@@ -605,11 +605,11 @@ Camera:
   m_TargetEye: 3
   m_HDR: 1
   m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+  m_StereoMirrorMode: 0
 --- !u!81 &81448788386869576
 AudioListener:
   m_ObjectHideFlags: 1
@@ -689,7 +689,6 @@ MonoBehaviour:
   m_PreferredHeight: -1
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
-  m_LayoutPriority: 1
 --- !u!114 &114171599116525746
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -728,6 +727,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 206f850caf3bdf6408703246b521847b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _statement: {fileID: 0}
 --- !u!114 &114215202440737784
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -861,7 +861,6 @@ MonoBehaviour:
   m_PreferredHeight: -1
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
-  m_LayoutPriority: 1
 --- !u!114 &114410289888777598
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -932,7 +931,6 @@ MonoBehaviour:
   m_PreferredHeight: -1
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
-  m_LayoutPriority: 1
 --- !u!114 &114484565912214058
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1000,7 +998,6 @@ MonoBehaviour:
   m_PreferredHeight: -1
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
-  m_LayoutPriority: 1
 --- !u!114 &114597572833431470
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1106,7 +1103,6 @@ MonoBehaviour:
   m_PreferredHeight: -1
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
-  m_LayoutPriority: 1
 --- !u!114 &114733708846686472
 MonoBehaviour:
   m_ObjectHideFlags: 1
