@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class AcceptChoice : MonoBehaviour {
     
     public string[] statementText;//= new string[] {"Statement1", "Statement2", "Statement3"};
+    public int[] characterScore;
 
     public bool overMouse;
     private PaddleController _paddleController;

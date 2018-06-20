@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Answers : MonoBehaviour {
 
     private AcceptChoice acceptChoice;
-    int givenAnswer;
+    public int givenAnswer;
     private Slider swordSlider;
 
 	void Start ()
