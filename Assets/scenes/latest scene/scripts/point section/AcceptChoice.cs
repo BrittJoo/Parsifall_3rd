@@ -7,10 +7,10 @@ using UnityEngine.UI;
 public class AcceptChoice : MonoBehaviour {
     
     public string[] statementText;//= new string[] {"Statement1", "Statement2", "Statement3"};
+    public int[][] jaggedArrayStatements = new int[3][];
 
     public bool overMouse;
     private PaddleController _paddleController;
-    private Answers answers;
     public Text StatementTextObject;
 
     public Slider swordSlider;
@@ -24,7 +24,7 @@ public class AcceptChoice : MonoBehaviour {
 
     private paddle paddle;
 
-    #region keepOff
+
     //[SerializeField] List<int> statement = new List<int>();
     //[SerializeField] List<int> character = new List<int>();
     //[SerializeField] List<int> answers = new List<int>();
@@ -32,6 +32,9 @@ public class AcceptChoice : MonoBehaviour {
 
     void Start()
     {
+        jaggedArrayStatements[0] =  new int [18];
+        jaggedArrayStatements[1] = new int[4];
+        jaggedArrayStatements[2] = new int[6];
 
         //  int indexChar = character.IndexOf(120);
         // List.IndexOf(character);
@@ -76,15 +79,13 @@ public class AcceptChoice : MonoBehaviour {
         //    currentStatement = 1;
         //    lastStatement = 1;
     }
-#endregion
+	
 
-    public void ClickingTask()
+   public void ClickingTask()
     {
         
         if (canClickNext)
         {
-            var stellingInstance = ScriptableObject.CreateInstance<ScoreKeeper>();
-
             lastStatement = currentStatement;
 
             StatementTextObject.text = statementText[currentTextIndex];
@@ -100,7 +101,7 @@ public class AcceptChoice : MonoBehaviour {
             //if (swordSlider.value == 2) { }
             //if (swordSlider.value == 3) {Debug.Log("je hebt oneens geselecteerd"); }
             // Antwoord.CheckValue()
-            answers.GetData();
+
              currentStatement++;
 
         }
