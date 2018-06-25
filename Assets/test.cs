@@ -15,7 +15,7 @@ public class test : MonoBehaviour {
 
             for (int i = 0; i < 6; i++)
             {
-                Stellingen.Add(characterScore(i));
+                //Stellingen.Add(characterScore(i));
                   //  characterScore.Add(i);
             }
         //{

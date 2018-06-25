@@ -4,24 +4,50 @@ using UnityEngine;
 
 public class TestingArrayOrList : MonoBehaviour {
 
-    [SerializeField]
-    List<TestingDataClass> stellingen = new List<TestingDataClass>();
+    public List<TestingDataClass> stellingen = new List<TestingDataClass>();
+    private AcceptChoice acceptChoice;
 
-	// Use this for initialization
-	void Start ()
+    private int characterOne;
+    private int characterTwo;
+    private int characterThree;
+    private int characterFour;
+    private int characterFive;
+    private int characterSix;
+
+    // Use this for initialization
+    void Start ()
     {
 
         stellingen.Add(new TestingDataClass("Statement",100,25,0,50)); // Eerste stelling
         stellingen.Add(new TestingDataClass("Statement",50,25,100,0)); // Tweede stelling
 	}
-	
-	// Update is called once per frame
-	void Update ()
+
+    private void Update()
+    {
+            for (int i = 0; i < 18; i++)
+            {
+            if (acceptChoice.hasAccepted)
+            {
+
+                acceptChoice.hasAccepted = false;
+            }
+            }
+    }
+
+    // Update is called once per frame
+    public int GivePoints (int classAwnserValue, int character)
     {
 
 
-        //characterOne += stellingen[0].classAwnserValue4;
-        //characterTwo += stellingen[0].classAwnserValue3;
+        character += classAwnserValue;
+
+        return character;
+
+        
+
+        //characterOne += classAwnserValue;
+        //characterTwo += /*stellingen[0].*/classAwnserValue;
+        //characterThree += classAwnserValue;
 
         //characterOne += stellingen[1]
     }

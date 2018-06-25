@@ -10,8 +10,11 @@ public class AcceptChoice : MonoBehaviour {
     public int[] characterScore;
 
     public bool overMouse;
+    public bool hasAccepted;
+
     private PaddleController _paddleController;
     private Answers answers;
+    private TestingArrayOrList testingArrayOrList;
 
     public Text StatementTextObject;
 
@@ -79,8 +82,9 @@ public class AcceptChoice : MonoBehaviour {
         //    lastStatement = 1;
     }
 
-#endregion
-    
+    #endregion
+
+
     public void ClickingTask()
     {
         
@@ -105,6 +109,12 @@ public class AcceptChoice : MonoBehaviour {
             
 
              currentStatement++;
+            //if (currentStatement == 1)
+            //{
+               
+            //    testingArrayOrList.GivePoints(10, 1);
+            //    Debug.Log(testingArrayOrList.GivePoints());
+            //}
 
         }
 
@@ -113,6 +123,8 @@ public class AcceptChoice : MonoBehaviour {
             canClickNext = false;
             StartCoroutine(Wait(5));
         }
+
+        hasAccepted = true;
     }
 
     public IEnumerator Wait(float waitTime)
