@@ -7,7 +7,7 @@ public class Answers : MonoBehaviour {
 
     private AcceptChoice acceptChoice;
     public int givenAnswer;
-    private Slider swordSlider;
+    public Slider swordSlider;
 
 	void Start ()
     {

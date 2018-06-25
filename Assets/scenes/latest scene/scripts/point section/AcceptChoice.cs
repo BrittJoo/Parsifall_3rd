@@ -34,7 +34,7 @@ public class AcceptChoice : MonoBehaviour {
 
     void Start()
     {
-
+        answers = FindObjectOfType<Answers>();
         //  int indexChar = character.IndexOf(120);
         // List.IndexOf(character);
 
@@ -80,7 +80,7 @@ public class AcceptChoice : MonoBehaviour {
     }
 
 #endregion
-
+    
     public void ClickingTask()
     {
         

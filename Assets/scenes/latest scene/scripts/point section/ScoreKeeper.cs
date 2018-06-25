@@ -12,7 +12,6 @@ public class ScoreKeeper : ScriptableObject
     private int charPoints4;
     private int charPoints5;
     private int charPoints6;
-
     private Answers answers;
 
     void Start()

@@ -961,6 +961,8 @@ GameObject:
   m_Component:
   - component: {fileID: 575104500}
   - component: {fileID: 575104499}
+  - component: {fileID: 575104501}
+  - component: {fileID: 575104502}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -994,6 +996,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &575104501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 575104498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1819696ad4af31e49a6161e20de2dfeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  givenAnswer: 0
+  swordSlider: {fileID: 266067734}
+--- !u!114 &575104502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 575104498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91640bc4f1f6e5743919d864c809e134, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &618213369
 GameObject:
   m_ObjectHideFlags: 0
@@ -1296,9 +1322,11 @@ MonoBehaviour:
   - Statement 16
   - Statement 17
   - Statement 18
+  characterScore: 
   overMouse: 0
   StatementTextObject: {fileID: 1330217429}
   swordSlider: {fileID: 266067734}
+  currentStatement: 0
 --- !u!1 &834771056
 GameObject:
   m_ObjectHideFlags: 0
