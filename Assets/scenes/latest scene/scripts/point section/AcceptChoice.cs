@@ -15,6 +15,9 @@ public class AcceptChoice : MonoBehaviour {
     private PaddleController _paddleController;
     private Answers answers;
     private TestingArrayOrList testingArrayOrList;
+    private AcceptChoice acceptChoice;
+
+    private int[] charArray;
 
     public Text StatementTextObject;
 
@@ -38,6 +41,10 @@ public class AcceptChoice : MonoBehaviour {
     void Start()
     {
         answers = FindObjectOfType<Answers>();
+        testingArrayOrList = FindObjectOfType<TestingArrayOrList>();
+        acceptChoice = FindObjectOfType<AcceptChoice>();
+
+        charArray = acceptChoice.charArray;
         //  int indexChar = character.IndexOf(120);
         // List.IndexOf(character);
 
@@ -87,16 +94,16 @@ public class AcceptChoice : MonoBehaviour {
 
     public void ClickingTask()
     {
-        
+        hasAccepted = true;
         if (canClickNext)
         {
+            answers.AnswerValueCheck();
             var statementDatas = ScriptableObject.CreateInstance<ScoreKeeper>();
             answers.GetData();
             lastStatement = currentStatement;
 
             StatementTextObject.text = statementText[currentTextIndex];
             currentTextIndex++;
-            Debug.Log(currentTextIndex);
             //if (swordSlider.value == 0)
             //{
             //    Debug.Log("give a charecter a point");
@@ -106,9 +113,11 @@ public class AcceptChoice : MonoBehaviour {
             //if (swordSlider.value == 2) { }
             //if (swordSlider.value == 3) {Debug.Log("je hebt oneens geselecteerd"); }
             // Antwoord.CheckValue()
-            
 
+            //loop functie givepoints
+            testingArrayOrList.SaveAnswer();
              currentStatement++;
+
             //if (currentStatement == 1)
             //{
                
@@ -124,7 +133,7 @@ public class AcceptChoice : MonoBehaviour {
             StartCoroutine(Wait(5));
         }
 
-        hasAccepted = true;
+        hasAccepted = false;
     }
 
     public IEnumerator Wait(float waitTime)
