@@ -50,7 +50,7 @@ public class ScoreKeeper : ScriptableObject
             //if (jaggedArrayStatements[1] == 1)
             //{
             //    charPoints1 = 1;
-            //}
+            //} HOi
         }
     }
 }
