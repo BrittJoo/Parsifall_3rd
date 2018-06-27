@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class TestingArrayOrList : MonoBehaviour {
 
-    public List<TestingDataClass> stellingen = new List<TestingDataClass>();
     public List<Character1PointsData> char1Points = new List<Character1PointsData>();
     public List<Character2PointsData> char2Points = new List<Character2PointsData>();
     public List<Character3PointsData> char3Points = new List<Character3PointsData>();
@@ -35,18 +34,15 @@ public class TestingArrayOrList : MonoBehaviour {
         acceptChoice = FindObjectOfType<AcceptChoice>();
         answers = FindObjectOfType<Answers>();
 
-        stellingen.Add(new TestingDataClass("Statement",100,25,0,50)); // Eerste stelling
-        stellingen.Add(new TestingDataClass("Statement",50,25,100,0)); // Tweede stelling
 
+        char1Points.Add(new Character1PointsData(100, 25, 0, 50)); // Eerste stelling)
+        char1Points.Add(new Character1PointsData(0, 50, 100, 25)); // Tweede stelling)
 
-        char1Points.Add(new Character1PointsData("Statement", 100, 25, 0, 50)); // Eerste stelling)
-        char1Points.Add(new Character1PointsData("Statement", 0, 50, 100, 25)); // Tweede stelling)
+        char2Points.Add(new Character2PointsData(0, 50, 100, 25)); // Eerste stelling)
+        char2Points.Add(new Character2PointsData(100, 25, 0, 50)); // tweede stelling)
 
-        char2Points.Add(new Character2PointsData("Statement", 0, 50, 100, 25)); // Eerste stelling)
-        char2Points.Add(new Character2PointsData("Statement", 100, 25, 0, 50)); // tweede stelling)
-
-        char3Points.Add(new Character3PointsData("Statement", 4, 3, 2, 1)); // Eerste stelling)
-        char3Points.Add(new Character3PointsData("Statement", 1, 2, 3, 4)); // tweede stelling)
+        char3Points.Add(new Character3PointsData( 4, 3, 2, 1)); // Eerste stelling)
+        char3Points.Add(new Character3PointsData( 1, 2, 3, 4)); // tweede stelling)
     }
 
     public void Update()

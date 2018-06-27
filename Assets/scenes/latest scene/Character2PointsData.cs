@@ -8,9 +8,8 @@ public class Character2PointsData   {
     public int classAwnserValue4;
 
 
-    public Character2PointsData(string statement, int awnserValue1, int awnserValue2, int awnserValue3, int awnserValue4)
+    public Character2PointsData( int awnserValue1, int awnserValue2, int awnserValue3, int awnserValue4)
     {
-        classSatement = statement;
         classAwnserValue1 = awnserValue1;
         classAwnserValue2 = awnserValue2;
         classAwnserValue3 = awnserValue3;
