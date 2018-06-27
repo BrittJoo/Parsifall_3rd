@@ -7,10 +7,20 @@ using UnityEngine.UI;
 public class AcceptChoice : MonoBehaviour {
     
     public string[] statementText;//= new string[] {"Statement1", "Statement2", "Statement3"};
+    public int[] characterScore;
 
     public bool overMouse;
+    public bool hasAccepted;
+
     private PaddleController _paddleController;
     private Answers answers;
+    private TestingArrayOrList testingArrayOrList;
+    private AcceptChoice acceptChoice;
+    private CharacterResult characterResult;
+    private int highestInt = 0;
+
+    private int[] charArray;
+
     public Text StatementTextObject;
 
     public Slider swordSlider;
@@ -24,7 +34,7 @@ public class AcceptChoice : MonoBehaviour {
 
     private paddle paddle;
 
-    #region keepOff
+#region Junk
     //[SerializeField] List<int> statement = new List<int>();
     //[SerializeField] List<int> character = new List<int>();
     //[SerializeField] List<int> answers = new List<int>();
@@ -32,7 +42,13 @@ public class AcceptChoice : MonoBehaviour {
 
     void Start()
     {
+        answers = FindObjectOfType<Answers>();
+        testingArrayOrList = FindObjectOfType<TestingArrayOrList>();
+        characterResult = FindObjectOfType<CharacterResult>();
+        charArray = testingArrayOrList.charArray;
+        //acceptChoice = FindObjectOfType<AcceptChoice>();
 
+        //charArray = acceptChoice.charArray;
         //  int indexChar = character.IndexOf(120);
         // List.IndexOf(character);
 
@@ -76,21 +92,22 @@ public class AcceptChoice : MonoBehaviour {
         //    currentStatement = 1;
         //    lastStatement = 1;
     }
-#endregion
+
+    #endregion
+
 
     public void ClickingTask()
     {
-        
+        hasAccepted = true;
         if (canClickNext)
         {
-            var stellingInstance = ScriptableObject.CreateInstance<ScoreKeeper>();
-
+            answers.AnswerValueCheck();
+            var statementDatas = ScriptableObject.CreateInstance<ScoreKeeper>();
+            answers.GetData();
             lastStatement = currentStatement;
 
             StatementTextObject.text = statementText[currentTextIndex];
             currentTextIndex++;
-            Debug.Log(currentTextIndex);
-
             //if (swordSlider.value == 0)
             //{
             //    Debug.Log("give a charecter a point");
@@ -100,8 +117,13 @@ public class AcceptChoice : MonoBehaviour {
             //if (swordSlider.value == 2) { }
             //if (swordSlider.value == 3) {Debug.Log("je hebt oneens geselecteerd"); }
             // Antwoord.CheckValue()
-            answers.GetData();
+
+            //loop functie givepoints
+            testingArrayOrList.SaveAnswer();
              currentStatement++;
+            Debug.Log(currentStatement);
+
+
 
         }
 
@@ -110,6 +132,8 @@ public class AcceptChoice : MonoBehaviour {
             canClickNext = false;
             StartCoroutine(Wait(5));
         }
+
+        hasAccepted = false;
     }
 
     public IEnumerator Wait(float waitTime)
