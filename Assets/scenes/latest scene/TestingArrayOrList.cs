@@ -11,11 +11,13 @@ public class TestingArrayOrList : MonoBehaviour {
     private AcceptChoice acceptChoice;
     private Answers answers;
 
+    private DataSavingTest savingData;
+
     public int[] charArray;
 
-    private int characterOne;
-    private int characterTwo;
-    private int characterThree;
+    private int characterOne =0;
+    private int characterTwo =1;
+    private int characterThree =2;
     private int characterFour;
     private int characterFive;
     private int characterSix;
@@ -25,6 +27,9 @@ public class TestingArrayOrList : MonoBehaviour {
 
     public int[] statementAnswers;
 
+    [SerializeField]
+    private int maxStatements;
+
     // Use this for initialization
     void Start ()
     {
@@ -33,6 +38,7 @@ public class TestingArrayOrList : MonoBehaviour {
         answerValue = new int[3];
         acceptChoice = FindObjectOfType<AcceptChoice>();
         answers = FindObjectOfType<Answers>();
+        savingData = FindObjectOfType<DataSavingTest>();
 
 
         char1Points.Add(new Character1PointsData(100, 25, 0, 50)); // Eerste stelling)
@@ -47,7 +53,7 @@ public class TestingArrayOrList : MonoBehaviour {
 
     public void Update()
     {
-        //Debug.Log(charArray[2]);
+        StoreData();
     }
 
     // Update is called once per frame
@@ -60,7 +66,7 @@ public class TestingArrayOrList : MonoBehaviour {
     public void SaveAnswer()
     {
         statementAnswers[acceptChoice.currentStatement] = answers.givenAnswer;
-        Debug.Log(statementAnswers);
+        //Debug.Log(statementAnswers);
     }
 
     public void AnswerCharLoop()
@@ -69,11 +75,28 @@ public class TestingArrayOrList : MonoBehaviour {
         {
             charArray[currentCharacter] = GivePoints(answerValue[currentCharacter], o);
             currentCharacter++;
-            Debug.Log("answer value 0 : " + answerValue[0]);
-            Debug.Log("answer value 1 : " + answerValue[1]);
-            Debug.Log(currentCharacter + " = current Car");
+
+            
+
+            //Debug.Log("answer value 0 : " + answerValue[0]);
+            //Debug.Log("answer value 1 : " + answerValue[1]);
+            //Debug.Log(currentCharacter + " = current Car");
         }
+
         currentCharacter = 0;
     }
 
+    public void StoreData()
+    {
+        // PlayerPrefs.SetString("CharNameOne", "Loner");
+
+        if (acceptChoice.currentStatement >= maxStatements)
+        {
+            savingData.SaveData("Loner", "Optimist", "Pesimist", characterOne, characterTwo, characterThree, acceptChoice.currentStatement, answers.givenAnswer);
+
+            Debug.Log("Character One Name: " + PlayerPrefs.GetString("Character One Name: ") + ". Score: "  + PlayerPrefs.GetInt("Loner Score"));
+        }
+
+        //Debug.Log(PlayerPrefs.GetString("CharNameOne"));
+    }
 }

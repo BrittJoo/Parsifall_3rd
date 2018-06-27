@@ -94,7 +94,7 @@ public class paddle : MonoBehaviour
         {
             //point to...
             transform.position = snap3.transform.position;
-            Debug.Log("je zit in de beetjeoneens void");
+            //Debug.Log("je zit in de beetjeoneens void");
         buttonchoise = 4;
 
         }
