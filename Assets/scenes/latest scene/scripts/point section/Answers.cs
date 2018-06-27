@@ -60,15 +60,12 @@ public class Answers : MonoBehaviour {
 
         if (swordSlider.value == 3)
         {
-            //Debug.Log("je select value 3");
-            //Debug.Log(acceptChoice.hasAccepted);
             givenAnswer = 4;
             if (acceptChoice.hasAccepted)
             {
                 testingArrayOrList.answerValue[0] = testingArrayOrList.char1Points[acceptChoice.currentStatement].classAwnserValue4;
                 testingArrayOrList.answerValue[1] = testingArrayOrList.char2Points[acceptChoice.currentStatement].classAwnserValue4;
                 testingArrayOrList.answerValue[2] = testingArrayOrList.char3Points[acceptChoice.currentStatement].classAwnserValue4;
-                //Debug.Log(testingArrayOrList.answerValue);
                  testingArrayOrList.AnswerCharLoop();
             }
         }

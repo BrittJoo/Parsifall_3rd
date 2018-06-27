@@ -16,6 +16,8 @@ public class AcceptChoice : MonoBehaviour {
     private Answers answers;
     private TestingArrayOrList testingArrayOrList;
     private AcceptChoice acceptChoice;
+    private CharacterResult characterResult;
+    private int highestInt = 0;
 
     private int[] charArray;
 
@@ -42,9 +44,11 @@ public class AcceptChoice : MonoBehaviour {
     {
         answers = FindObjectOfType<Answers>();
         testingArrayOrList = FindObjectOfType<TestingArrayOrList>();
-        acceptChoice = FindObjectOfType<AcceptChoice>();
+        characterResult = FindObjectOfType<CharacterResult>();
+        charArray = testingArrayOrList.charArray;
+        //acceptChoice = FindObjectOfType<AcceptChoice>();
 
-        charArray = acceptChoice.charArray;
+        //charArray = acceptChoice.charArray;
         //  int indexChar = character.IndexOf(120);
         // List.IndexOf(character);
 
@@ -117,13 +121,9 @@ public class AcceptChoice : MonoBehaviour {
             //loop functie givepoints
             testingArrayOrList.SaveAnswer();
              currentStatement++;
+            Debug.Log(currentStatement);
 
-            //if (currentStatement == 1)
-            //{
-               
-            //    testingArrayOrList.GivePoints(10, 1);
-            //    Debug.Log(testingArrayOrList.GivePoints());
-            //}
+
 
         }
 

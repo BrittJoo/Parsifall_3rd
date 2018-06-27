@@ -10,6 +10,7 @@ public class TestingArrayOrList : MonoBehaviour {
 
     private AcceptChoice acceptChoice;
     private Answers answers;
+    private CharacterResult characterResult;
 
     private DataSavingTest savingData;
 
@@ -21,6 +22,8 @@ public class TestingArrayOrList : MonoBehaviour {
     private int characterFour;
     private int characterFive;
     private int characterSix;
+    private int highestInt;
+   // private int currentStatement;
 
     public int currentCharacter = 0;
     public int[] answerValue;
@@ -39,16 +42,20 @@ public class TestingArrayOrList : MonoBehaviour {
         acceptChoice = FindObjectOfType<AcceptChoice>();
         answers = FindObjectOfType<Answers>();
         savingData = FindObjectOfType<DataSavingTest>();
+        characterResult = FindObjectOfType<CharacterResult>();
 
 
         char1Points.Add(new Character1PointsData(100, 25, 0, 50)); // Eerste stelling)
         char1Points.Add(new Character1PointsData(0, 50, 100, 25)); // Tweede stelling)
+        char1Points.Add(new Character1PointsData(25, 100, 50, 0)); // derde stelling)
 
         char2Points.Add(new Character2PointsData(0, 50, 100, 25)); // Eerste stelling)
         char2Points.Add(new Character2PointsData(100, 25, 0, 50)); // tweede stelling)
+        char2Points.Add(new Character2PointsData(50, 50, 25, 100)); // derde stelling)
 
-        char3Points.Add(new Character3PointsData( 4, 3, 2, 1)); // Eerste stelling)
-        char3Points.Add(new Character3PointsData( 1, 2, 3, 4)); // tweede stelling)
+        char3Points.Add(new Character3PointsData(4, 3, 2, 1, "characterThree")); // Eerste stelling)
+        char3Points.Add(new Character3PointsData( 1, 2, 3, 4, "characterThree")); // tweede stelling)
+        char3Points.Add(new Character3PointsData(2, 4, 1, 3, "characterThree")); // derde stelling)
     }
 
     public void Update()
@@ -75,14 +82,14 @@ public class TestingArrayOrList : MonoBehaviour {
         {
             charArray[currentCharacter] = GivePoints(answerValue[currentCharacter], o);
             currentCharacter++;
-
-            
-
-            //Debug.Log("answer value 0 : " + answerValue[0]);
-            //Debug.Log("answer value 1 : " + answerValue[1]);
-            //Debug.Log(currentCharacter + " = current Car");
         }
 
+        if (acceptChoice.currentStatement == 2)
+        {
+            Debug.Log("current statement is 3");
+            characterResult.GetTheHighest(charArray, highestInt);
+            Debug.Log("highest int is calculated");
+        }
         currentCharacter = 0;
     }
 
