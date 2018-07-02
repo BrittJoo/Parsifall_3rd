@@ -1411,9 +1411,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   statementText:
-  - Statement 2
-  - Statement 3
-  - Statement 4
+  - 2 Ik heb per ongeluk de zijspiegel van de auto van mijn ouders kapotgemaakt, dat
+    ga ik echt niet tegen ze zeggen.
+  - 3 Ook al moet ik saai werk doen, als ik daar flink geld mee verdien, vind ik het
+    best
+  - 4 Ik heb liever een paar goede vrienden die ik vaak spreek dan heel veel vrienden
+    waar ik oppervlakkig contact mee heb
   - Statement 5
   - Statement 6
   - Statement 7
