@@ -768,7 +768,7 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &435276960
 GameObject:
@@ -995,36 +995,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1 &561913508
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 1046417741237298, guid: 5871e5d919a29164da70b54c8838770c,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 561913509}
-  m_Layer: 0
-  m_Name: test
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &561913509
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 4917316581613990, guid: 5871e5d919a29164da70b54c8838770c,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 561913508}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &575104498
 GameObject:
   m_ObjectHideFlags: 0
@@ -1083,8 +1053,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1819696ad4af31e49a6161e20de2dfeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  givenAnswer: 0
   swordSlider: {fileID: 266067734}
+  givenAnswer: 0
 --- !u!114 &575104502
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1096,10 +1066,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91640bc4f1f6e5743919d864c809e134, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  charArray: 
   currentCharacter: 0
   answerValue: 
   statementAnswers: 
+  charArray: 
   maxStatements: 2
 --- !u!114 &575104503
 MonoBehaviour:
@@ -1410,32 +1380,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14f496bfd6ceeb449b80b70456e3dee5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  StatementTextObject: {fileID: 1330217429}
+  hasAccepted: 0
   statementText:
-  - 2 Ik heb per ongeluk de zijspiegel van de auto van mijn ouders kapotgemaakt, dat
+  - Ik heb per ongeluk de zijspiegel van de auto van mijn ouders kapotgemaakt, dat
     ga ik echt niet tegen ze zeggen.
-  - 3 Ook al moet ik saai werk doen, als ik daar flink geld mee verdien, vind ik het
-    best
-  - 4 Ik heb liever een paar goede vrienden die ik vaak spreek dan heel veel vrienden
-    waar ik oppervlakkig contact mee heb
-  - Statement 5
-  - Statement 6
-  - Statement 7
-  - Statement 8
-  - Statement 9
-  - Statement 10
-  - Statement 11
-  - Statement 12
-  - Statement 13
-  - Statement 14
-  - Statement 15
+  - Ook al moet ik saai werk doen, als ik daar flink geld mee verdien, vind ik het
+    best.
+  - Ik heb liever een paar goede vrienden die ik vaak spreek dan heel veel vrienden
+    waar ik oppervlakkig contact mee heb.
+  - Op vakantie wil ik niks gepland hebben.
+  - Echte vriendschap is voor mij dat ik al mijn persoonlijke issues met diegene kan
+    delen.
+  - Ik vind vrienden belangrijker dan familie.
+  - Het is zonde als je een studie of werk kiest wat onder je niveau is.
+  - Een hele zaterdag vrijwillig meehelpen bij een buurtactiviteit vind ik leuk om
+    te doen.
+  - Ik plan van tevoren mijn vakantie grotendeels want dan kan ik tijdens de vakantie
+    veel zien en beleven.
+  - Als ik de laatste bus of trein mis, vind ik het normaal dat mijn ouders mij ophalen.
+  - Ik wil eerst wat van de wereld zien voordat ik mij ga settelen in een vaste relatie.
+  - Mijn studiekeuze baseer ik op dat waar ik de meeste kans op werk heb.
+  - Op je 18e moet je weten wat voor werk je wilt gaan doen.
+  - Op vakantie wil ik actieve dingen doen ook al wil degene met wie ik op vakantie
+    ben het liefst luieren.
   - Statement 16
   - Statement 17
   - Statement 18
-  characterScore: 
-  overMouse: 0
-  hasAccepted: 0
-  StatementTextObject: {fileID: 1330217429}
-  swordSlider: {fileID: 266067734}
   currentStatement: 0
 --- !u!1 &777300303
 GameObject:
@@ -1509,7 +1480,7 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &834771056
 GameObject:
@@ -1866,7 +1837,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 206f850caf3bdf6408703246b521847b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _statement: {fileID: 0}
 --- !u!1 &1327984207
 GameObject:
   m_ObjectHideFlags: 0
@@ -2009,7 +1979,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Is een appel rood?
+  m_Text: Ik vind een feestje waar alcohol wordt gedronken gezelliger dan een feestje
+    waar geen alcohol te krijgen is.
 --- !u!222 &1330217430
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2445,5 +2416,5 @@ Transform:
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

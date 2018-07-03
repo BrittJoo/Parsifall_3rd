@@ -25,7 +25,7 @@ public class paddle : MonoBehaviour
     void Update()
     {
         Debug.Log(overMouse);
-        overMouse = FindObjectOfType<AcceptChoice>().overMouse;
+       // overMouse = FindObjectOfType<AcceptChoice>().overMouse;
 
         if (Input.GetMouseButton(0) && !overMouse)
         {

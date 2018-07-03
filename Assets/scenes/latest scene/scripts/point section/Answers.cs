@@ -7,13 +7,12 @@ public class Answers : MonoBehaviour {
 
     private AcceptChoice acceptChoice;
     private TestingArrayOrList testingArrayOrList;
-    //private Character1PointsData character1PointsData;
-    //private Character2PointsData character2PointsData;
 
-    private int answerValue;
+    public Slider swordSlider;
 
     public int givenAnswer;
-    public Slider swordSlider;
+
+
 
     void Start()
     {
@@ -70,15 +69,5 @@ public class Answers : MonoBehaviour {
             }
         }
 
-    }
-            
-
-
-    public void GetData ()
-    {
-        int statement;
-        int answer;
-        statement = acceptChoice.currentStatement;
-        answer = givenAnswer;
-	}
+    }           
 }

@@ -9,6 +9,8 @@ public class CharacterResult : MonoBehaviour {
     public GameObject ch2;
     public GameObject ch3;
 
+    private int resultChar;
+
     public int GetTheHighest(int[] allScores, int highestInt)
     {
         highestInt = allScores.Max();
@@ -19,18 +21,21 @@ public class CharacterResult : MonoBehaviour {
         {
             Debug.Log("character one has the most points");
             ch1.SetActive(true);
+            resultChar = 1;
         }
 
         if (allScores[1] == highestInt)
         {
             Debug.Log("character two has the most points");
             ch2.SetActive(true);
+            resultChar = 2;
         }
 
         if (allScores[2] == highestInt)
         {
             Debug.Log("character three has the most points");
             ch3.SetActive(true);
+            resultChar = 3;
         }
 
         return highestInt;

@@ -11,11 +11,8 @@ public class TestingArrayOrList : MonoBehaviour {
     private AcceptChoice acceptChoice;
     private Answers answers;
     private CharacterResult characterResult;
-
     private DataSavingTest savingData;
-
-    public int[] charArray;
-
+  
     private int characterOne =0;
     private int characterTwo =1;
     private int characterThree =2;
@@ -23,17 +20,16 @@ public class TestingArrayOrList : MonoBehaviour {
     private int characterFive;
     private int characterSix;
     private int highestInt;
-   // private int currentStatement;
-
     public int currentCharacter = 0;
-    public int[] answerValue;
 
+    public int[] answerValue;
     public int[] statementAnswers;
+    public int[] charArray;
 
     [SerializeField]
     private int maxStatements;
 
-    // Use this for initialization
+
     void Start ()
     {
         statementAnswers = new int[18];
@@ -63,7 +59,6 @@ public class TestingArrayOrList : MonoBehaviour {
         StoreData();
     }
 
-    // Update is called once per frame
     public int GivePoints (int classAwnserValue, int character)
     {
         character += classAwnserValue;
@@ -73,7 +68,6 @@ public class TestingArrayOrList : MonoBehaviour {
     public void SaveAnswer()
     {
         statementAnswers[acceptChoice.currentStatement] = answers.givenAnswer;
-        //Debug.Log(statementAnswers);
     }
 
     public void AnswerCharLoop()
@@ -86,9 +80,7 @@ public class TestingArrayOrList : MonoBehaviour {
 
         if (acceptChoice.currentStatement == 2)
         {
-            Debug.Log("current statement is 3");
             characterResult.GetTheHighest(charArray, highestInt);
-            Debug.Log("highest int is calculated");
         }
         currentCharacter = 0;
     }
