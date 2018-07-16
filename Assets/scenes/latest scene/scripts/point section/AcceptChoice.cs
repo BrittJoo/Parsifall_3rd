@@ -10,6 +10,7 @@ public class AcceptChoice : MonoBehaviour {
     private Answers answers;
     private TestingArrayOrList testingArrayOrList;
     private CharacterResult characterResult;
+    private StoryImageSlideController storyImageSlideController;
 
     public Text StatementTextObject;
 
@@ -30,6 +31,7 @@ public class AcceptChoice : MonoBehaviour {
         testingArrayOrList = FindObjectOfType<TestingArrayOrList>();
         characterResult = FindObjectOfType<CharacterResult>();
         charArray = testingArrayOrList.charArray;
+        storyImageSlideController = FindObjectOfType<StoryImageSlideController>();
     }
 
 
@@ -40,12 +42,13 @@ public class AcceptChoice : MonoBehaviour {
         if (canClickNext)
         {
             answers.AnswerValueCheck();
-            var statementDatas = ScriptableObject.CreateInstance<ScoreKeeper>();
+            var statementDatas = ScriptableObject.CreateInstance<ScoreKeeper>(); // obsolete?
             lastStatement = currentStatement;
 
             StatementTextObject.text = statementText[currentTextIndex];
             currentTextIndex++;
             testingArrayOrList.SaveAnswer();
+            storyImageSlideController.MoveStoryImage();
              currentStatement++;
             Debug.Log(currentStatement);
         }
