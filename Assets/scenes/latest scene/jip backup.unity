@@ -1718,6 +1718,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 982078731}
+  - component: {fileID: 982078732}
   m_Layer: 0
   m_Name: hoihoi
   m_TagString: Untagged
@@ -1738,6 +1739,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &982078732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 982078730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75bb1f51a24819a408ea69e1e7db138f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ch1: {fileID: 0}
+  ch2: {fileID: 0}
+  ch3: {fileID: 0}
 --- !u!1 &992377696
 GameObject:
   m_ObjectHideFlags: 0
